@@ -25,11 +25,14 @@
         <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
 <body style="margin: 0%;">
+
+
     <div class="head">
         <img src="foodlands.jpeg" width="100%" height="64%">
         <div class="top-right">
-        <button class="button" style=" float: right;  margin-bottom: 10px; margin-top: 10px; margin-right:10px"> <span><a href="index.php?logout='1'" style="background-color: transparent !important; color: #FFF; text-decoration: none;">Sign in</a> </span> </button>
-        <button class="button" style=" float: right;  margin-bottom: 10px; margin-top: 10px; margin-right:20px"> <span><a href="contact.html" style=" text-decoration: none; color: white;">Contact</a> </span> </button>
+        <button class="button" style=" float: right;  margin-bottom: 10px; margin-top: 10px; margin-right:10px"> <span><a href="index.php?logout='1'" style="background-color: transparent !important; color: #FFF; text-decoration: none;">Sign In</a> </span> </button>
+        <button class="button" style=" float: right;  margin-bottom: 10px; margin-top: 10px; margin-right:20px"> <span><a href="contact.php" style=" text-decoration: none; color: white;">Contact us</a> </span> </button>
+   
     </div>
         
     </div>
@@ -223,38 +226,104 @@
     <img src="northind-01.jpeg" width = 300px height = 250px alt="Poori bhaji" style="margin-left: 10px; margin-bottom: 0px; border-radius: 4%; position: absolute;">
     <p style=" margin-left: 325px; margin-top: 20px; margin-bottom: 0px; font-size: 30px"><b>North Indian Thali</b></p>
     <p style="margin-left: 325px; margin-top: 4px; margin-bottom: 0px; font-size: 19px;">A north Indian lunch menu with simple dal, chapati or roti, phulka, rice, a vegetable gravy, sabji and buttermilk or curd.</p>
-    <p style="display: inline-block; font-size: 30px; margin-left: 325px; margin-top: 20px; margin-bottom: 8px; margin-right: 78px;color: red;"><b>&#8377 111</b></p>
-   
-    <button onclick="decFunc('northtext', price.textContent)" style="display:inline-block; width: 6ch; height: 5ch;align-self: center; background-color: tomato; border-radius: 1ch;color: white;margin-left: 6px; margin-top: 0px;">-</button>
+    <p class="montextsm" style="margin-right: 0%;margin-left: 325px; font-size: 30px"><b>&#8377</b></p> 
+    <p class="montextsm" id="northi" style="font-size: 30px"><b>120</b></p>
+
+    <p class= "montextsm" style="margin-right: 0%; margin-left: 0%;font-size: 30px;">&#8377</p> 
+       <p class="montextsm" id="pricetot11" style="font-size: 30px;margin-right:0px">0</p>
+
+    <button onclick="decFunc('northtext', price.textContent,'northi', 'pricetot11')" style="display:inline-block; width: 6ch; height: 5ch;align-self: center; background-color: tomato; border-radius: 1ch;color: white;margin-left: 0px; margin-top: 0px;">-</button>
     <p id="northtext" style="font-size: 30px; display:inline-block; margin-left: 0px;align-self: center; margin-bottom: 0px; margin-right: 0px;">0</p>
-    <button onclick="incFunc('northtext', price.textContent)" style="display:inline-block; width: 6ch; height: 5ch; background-color: tomato; border-radius: 1ch;color: white; margin-left: 0px; margin-top: 0px; margin-bottom: 0px;">+</button>
+    <button onclick="incFunc('northtext', price.textContent,'northi', 'pricetot11')" style="display:inline-block; width: 6ch; height: 5ch; background-color: tomato; border-radius: 1ch;color: white; margin-left: 0px; margin-top: 0px; margin-bottom: 0px;">+</button>
    </div>  
 
    <div class="column" style=" margin-left: 2%; margin-right: 5%;">
     <img src="south-ind.jpeg" width = 300px height = 250px alt="Poori bhaji" style="margin-left: 10px; margin-bottom: 0px;  border-radius: 4%; position: absolute;">
     <p style="display: inline-block; margin-left: 325px; margin-top: 15px; margin-bottom: 0px; font-size: 30px"><b>South Indian Thali</b></p>
     <p style="margin-left: 325px; margin-top: 4px; margin-bottom: 0px; font-size: 19px;">A South Indian lunch menu with simple dal, chapati or roti, phulka, rice, a vegetable gravy, sabji and buttermilk or curd.</p>
-    <p style="display: inline-block; font-size: 30px; margin-left: 325px; margin-top: 20px; margin-bottom: 8px; margin-right: 78px;color: red;"><b>&#8377 120</b></p>
+    <p class="montextsm" style="margin-right: 0%;margin-left: 325px; font-size: 30px"><b>&#8377</b></p> 
+    <p class="montextsm" id="southi" style="font-size: 30px"><b>111</b></p>
 
-    <button onclick="decFunc('southtext', price.textContent)" style="display:inline-block; width: 6ch; height: 5ch;align-self: center; background-color: tomato; border-radius: 1ch;color: white;margin-left: 6px; margin-top: 0px;">-</button>
+    <p class= "montextsm" style="margin-right: 0%; margin-left: 0%;font-size: 30px;">&#8377</p> 
+       <p class="montextsm" id="pricetot12" style="font-size: 30px; margin-right:0px">0</p>
+
+    <button onclick="decFunc('southtext', price.textContent,'southi', 'pricetot12')" style="display:inline-block; width: 6ch; height: 5ch;align-self: center; background-color: tomato; border-radius: 1ch;color: white;margin-left: 6px; margin-top: 0px;">-</button>
     <p id="southtext" style="font-size: 30px; display:inline-block; margin-left: 0px;align-self: center; margin-bottom: 0px; margin-right: 0px;">0</p>
-    <button onclick="incFunc('southtext', price.textContent)" style="display:inline-block; width: 6ch; height: 5ch; background-color: tomato; border-radius: 1ch;color: white; margin-left: 0px; margin-top: 0px; margin-bottom: 0px;">+</button>
+    <button onclick="incFunc('southtext', price.textContent,'southi', 'pricetot12')" style="display:inline-block; width: 6ch; height: 5ch; background-color: tomato; border-radius: 1ch;color: white; margin-left: 0px; margin-top: 0px; margin-bottom: 40px;">+</button>
    </div>  
 
 
 </div>
 <br>
 <br>
-<div style="background-color:#FF0;">
-<button onclick="incPrice()" style="display: inline-block;height: 4ch;align-self: center; background-color: rgb(187, 122, 1);border-radius: 1ch;color: white;margin-left: 40px; margin-top: 20px; margin-bottom: 35px;font-size: 30px">Get total</button>
-<p style="display: inline-block; font-size: 40px; color:red; margin-left:15px" >&#8377</p>   
-<p style="display: inline-block; font-size: 40px; color:red;" id="price" name="price">0</p>
-<p style="display: inline-block; font-size: 40px; color:red;" >.00</p>
+<div style="background-color: gold">
+<div style="margin-bottom: 0px;background-image: url('unfood.jpg'); background-size: 100% 125%;font-size:0px; padding-top:50px !important;">
+<button onclick="incPrice()" style="display: inline-block;height: 4ch;align-self: center; background-color: rgb(187, 122, 1);border-radius: 1ch;color: white;margin-left: 45px; margin-top: 20px; margin-bottom: 35px;font-size: 30px;padding:0px !important;">Get total</button>
+<p style="display: inline-block; font-size: 40px; color:white; margin-left:15px;padding:0px !important;" >&#8377</p>   
+<p style="display: inline-block; font-size: 40px; color:white;padding:0px !important;" id="price" name="price">0</p>
+<p style="display: inline-block; font-size: 40px; color:white;padding:0px !important; " >.00</p>
 
-<button onclick="cart()" style="float: right;display: inline-block;height: 4ch;align-self: center; background-color: rgb(187, 122, 1);border-radius: 1ch;color: white;margin-left: 40px; margin-top: 40px; margin-bottom: 35px;font-size: 30px; margin-right: 35px">Go to Cart</button>
-  </div>
+<button onclick="thecart()" style="float: right;display: inline-block;height: 4ch;align-self: center; background-color: rgb(187, 122, 1);border-radius: 1ch;color: white;margin-left: 40px; margin-top: 34px; margin-bottom: 35px;font-size: 30px; margin-right: 45px;padding-bottom: 0px">Place Order</button>
+<div style="padding-bottom:20px;">   
+<p name="pt" id="pt" style=" color:rgb(187, 122, 1); font-size:40px;text-indent:43px;word-spacing: 40px; margin-bottom:0px;"><b></b></p>
+   <p name="p" id="p" style="color:white;margin-left:47px;font-size: 30px; word-spacing: 72px; margin-bottom:0px;padding-bottom: 0px"></p>
+   </div>
+</div>
 
-  <p id="pp">j</p>
+<?php
+    function incFunc($foodid,$price,$indprice, $pricetottt) {
+        $foodqty= document.getElementById(foodid).textContent;
+        k=Number(foodqty)+1;
+        document.getElementById(foodid).innerHTML=k; 
+        indivprice = document.getElementById(indprice).textContent;
+
+        l=k*Number(indivprice);
+        pricetot=document.getElementById(pricetottt).textContent;
+        document.getElementById(pricetottt).innerHTML=l; 
+        
+    }
+
+    function decFunc(fidinc, price, indprice, pricetott) {
+        stri= document.getElementById(fidinc).textContent;
+        if(Number(stri)>0){
+        k=Number(stri)-1;
+        document.getElementById(fidinc).innerHTML=k;
+
+        indivprice = document.getElementById(indprice).textContent;
+        pricetot = document.getElementById(pricetott).textContent;
+        
+        l=Number(pricetot)-indivprice;
+        document.getElementById(pricetott).innerHTML=l;
+
+        }
+    }
+
+    function incPrice(){
+        pr=0;
+        p1=Number(document.getElementById("pricetot1").textContent);
+        p2=Number(document.getElementById("pricetot2").textContent);
+        p3=Number(document.getElementById("pricetot3").textContent);
+        p4=Number(document.getElementById("pricetot4").textContent);
+        p5=Number(document.getElementById("pricetot5").textContent);
+        p6=Number(document.getElementById("pricetot6").textContent);
+        p7=Number(document.getElementById("pricetot7").textContent);
+        p8=Number(document.getElementById("pricetot8").textContent);
+        p9=Number(document.getElementById("pricetot9").textContent);
+        p10=Number(document.getElementById("pricetot10").textContent);
+        p11=Number(document.getElementById("pricetot11").textContent);
+        p12=Number(document.getElementById("pricetot12").textContent);
+
+        price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12];
+
+        pr=pr+p1+p2+p3+p4+p5+p6+p7+p8+p9+p10+p11+p12;
+
+        display = document.getElementById("price").textContent;
+        document.getElementById("price").innerHTML=pr;
+        cart();
+    }
+
+?>
+
     <script>
         pr=0;
         function incFunc(foodid,price,indprice, pricetottt) {
@@ -296,28 +365,32 @@
             p8=Number(document.getElementById("pricetot8").textContent);
             p9=Number(document.getElementById("pricetot9").textContent);
             p10=Number(document.getElementById("pricetot10").textContent);
+            p11=Number(document.getElementById("pricetot11").textContent);
+            p12=Number(document.getElementById("pricetot12").textContent);
 
-            price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10];
+            price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12];
 
-            pr=pr+p1+p2+p3+p4+p5+p6+p7+p8+p9+p10;
+            pr=pr+p1+p2+p3+p4+p5+p6+p7+p8+p9+p10+p11+p12;
 
             display = document.getElementById("price").textContent;
             document.getElementById("price").innerHTML=pr;
-
+            cart();
         }
 
     </script>
 
 
-   
 
-
-<?php
-echo $_SESSION['username'];
-?>
-
+<!-- <?php
+// echo $_SESSION['username'];
+?> -->
+<!-- <?php// echo $_SESSION['username'];?> -->
 <script>
     function cart(){
+        
+       ssp= "Food &emsp;&emsp;&emsp;&emsp;&emsp; Price &emsp;&emsp;&emsp; &nbsp;&emsp;&emsp;Qty &emsp;&emsp;&emsp;&emsp;&emsp; Total";
+        document.getElementById("pt").innerHTML=ssp;
+
             p1=Number(document.getElementById("pricetot1").textContent);
             p2=Number(document.getElementById("pricetot2").textContent);
             p3=Number(document.getElementById("pricetot3").textContent);
@@ -328,9 +401,26 @@ echo $_SESSION['username'];
             p8=Number(document.getElementById("pricetot8").textContent);
             p9=Number(document.getElementById("pricetot9").textContent);
             p10=Number(document.getElementById("pricetot10").textContent);
+            p11=Number(document.getElementById("pricetot11").textContent);
+            p12=Number(document.getElementById("pricetot12").textContent);
 
-        price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10];
-        title_arr=["Plain Dosa", "Idli Sambhar", "Poori bhaji", "Cutlet", "Masala Dosa", "Gulab Jamun", "Upma", "Noodles", "Coffee", "Tea"];
+
+        price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12];
+        title_arr=[
+            "PlainDosa....",
+            "IdliSambhar.", 
+            "PooriBhaji...", 
+            "Cutlet...........", 
+            "MasalaDosa.", 
+            "GulabJamun ", 
+            "Upma...........", 
+            "Noodles.......", 
+            "Coffee.........", 
+            "Tea..............",
+            "NorthThali",
+            "SouthThali"];
+
+            
         qty_arr=[
             Number(document.getElementById("plaint").textContent),
             Number(document.getElementById("idlit").textContent),
@@ -342,21 +432,143 @@ echo $_SESSION['username'];
             Number(document.getElementById("upmat").textContent),
             Number(document.getElementById("noodlet").textContent),
             Number(document.getElementById("coffeet").textContent),
-            Number(document.getElementById("teat").textContent)
+            Number(document.getElementById("teat").textContent),
+            Number(document.getElementById("northtext").textContent),
+            Number(document.getElementById("southtext").textContent)
         ];
         
-       
-        for(let i=0;i<10;i++){
-            if(qty_arr[i]!=0){
-                alert(qty_arr[i]+" "+title_arr[i]+ ",  Price: "+price_arr[i]+",  Unit price:"+ price_arr[i]/qty_arr[i]);
-            }
-        }
-
+        o=document.getElementById("p").textContent;
+        r="";
+        
         
 
+        for(let i=0;i<12;i++){
+            if(qty_arr[i]!=0){ // Insert data given below to db
+                r+=(title_arr[i]+ " &nbsp;&emsp;&emsp;&emsp;&emsp;₹"+ price_arr[i]/qty_arr[i]+"&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"+ qty_arr[i] +" &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ₹" +price_arr[i]+ "<br />");
+                document.getElementById("p").innerHTML=r;
+
+               
+            }
+
+        }
+
+       
+        
+  
+        // query="food1.php/?foodname="+title_arr[]+"&Qty"+qty_arr[];
+        // location.href=query
+        
     }
+
+    function thecart(){
+        
+      
+             p1=Number(document.getElementById("pricetot1").textContent);
+             p2=Number(document.getElementById("pricetot2").textContent);
+             p3=Number(document.getElementById("pricetot3").textContent);
+             p4=Number(document.getElementById("pricetot4").textContent);
+             p5=Number(document.getElementById("pricetot5").textContent);
+             p6=Number(document.getElementById("pricetot6").textContent);
+             p7=Number(document.getElementById("pricetot7").textContent);
+             p8=Number(document.getElementById("pricetot8").textContent);
+             p9=Number(document.getElementById("pricetot9").textContent);
+             p10=Number(document.getElementById("pricetot10").textContent);
+             p11=Number(document.getElementById("pricetot11").textContent);
+             p12=Number(document.getElementById("pricetot12").textContent);
+ 
+ 
+         price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12];
+         title_arr=[
+             "PlainDosa....",
+             "IdliSambhar.", 
+             "PooriBhaji...", 
+             "Cutlet...........", 
+             "MasalaDosa.", 
+             "GulabJamun ", 
+             "Upma...........", 
+             "Noodles.......", 
+             "Coffee.........", 
+             "Tea..............",
+             "NorthThali",
+             "SouthThali"];
+ 
+             
+         qty_arr=[
+             Number(document.getElementById("plaint").textContent),
+             Number(document.getElementById("idlit").textContent),
+             Number(document.getElementById("poorit").textContent),
+             Number(document.getElementById("cutlett").textContent),
+             Number(document.getElementById("masalat").textContent),
+ 
+             Number(document.getElementById("gulabt").textContent),
+             Number(document.getElementById("upmat").textContent),
+             Number(document.getElementById("noodlet").textContent),
+             Number(document.getElementById("coffeet").textContent),
+             Number(document.getElementById("teat").textContent),
+             Number(document.getElementById("northtext").textContent),
+             Number(document.getElementById("southtext").textContent)
+         ];
+         
+         o=document.getElementById("p").textContent;
+         r="";
+         
+         
+ 
+         for(let i=0;i<12;i++){
+             if(qty_arr[i]!=0){ // Insert data given below to db
+                 r+=(title_arr[i]+ " &nbsp;&emsp;&emsp;&emsp;&emsp;₹"+ price_arr[i]/qty_arr[i]+"&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"+ qty_arr[i] +" &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ₹" +price_arr[i]+ "<br />");
+                
+ 
+                
+             }
+ 
+         }
+ 
+        
+         alert("Dear <?php echo $_SESSION['username'] ?>, Your order has been placed successfully! Please pay ₹"+document.getElementById("price").textContent+".00 at the counter.")
+   
+         // query="food1.php/?foodname="+title_arr[]+"&Qty"+qty_arr[];
+         // location.href=query
+
+         incPrice();
+         
+     }
+ 
+     
+
+
+    </script>
     </script>
     
+
+    <div style="margin-top: 0px;background-color:rgb(197, 122, 10);padding:3%;text-align: center;" id="foo">
+        <table style="width:100%; color:white;">
+            <tr>
+                <th style="font-size: 2rem;padding-bottom: 1rem;">Location</th>
+                <th style="font-size: 2rem;padding-bottom: 1rem;">About Us</th>
+           
+                <th style="padding-bottom: 1rem;"><a style="text-decoration: none;color:black;font-size: 2rem;" href="/foodlands/contact.php"><span style="color:white;">Contact Us</span></a></th>
+            </tr>
+            <tr>
+                <td style="text-align: center;font-size: 1.5rem;">Mangalore</td>
+                <td style="text-align: center;font-size: 1.5rem;">Prathamesh S Pai</td>
+                <td style="text-align: center;font-size: 1.5rem;">Call Us</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;font-size: 1.5rem;">Bangalore</td>
+                <td style="text-align: center;font-size: 1.5rem;">Preeth Jain</td>
+                <td style="text-align: center;font-size: 1.5rem;">Whatsapp</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;font-size: 1.5rem;">Udupi</td>
+                <td></td>
+                <td style="text-align: center;font-size: 1.5rem;">Gmail</td>
+            </tr>
+
+            
+        </table>
+    </div>
+</div>
 
 </body>
 
