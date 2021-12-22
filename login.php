@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vossam Login</title>
+	<title>Welcome to Foodlands</title>
     <br>
     <br>
 </head>

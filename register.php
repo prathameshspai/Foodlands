@@ -3,7 +3,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="vossamcss.css">
-	<title>Vossam Registration</title>
+	<title>Foodlands Registration</title>
     
 	<style>
     .reg {
@@ -71,7 +71,6 @@
 
 
 		<div >
-		
 			<input type="text" name="username" placeholder="Name"  value="<?php echo $username; ?>">
 		</div>
 		<div >
