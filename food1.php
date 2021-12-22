@@ -270,59 +270,6 @@
    </div>
 </div>
 
-<?php
-    function incFunc($foodid,$price,$indprice, $pricetottt) {
-        $foodqty= document.getElementById(foodid).textContent;
-        k=Number(foodqty)+1;
-        document.getElementById(foodid).innerHTML=k; 
-        indivprice = document.getElementById(indprice).textContent;
-
-        l=k*Number(indivprice);
-        pricetot=document.getElementById(pricetottt).textContent;
-        document.getElementById(pricetottt).innerHTML=l; 
-        
-    }
-
-    function decFunc(fidinc, price, indprice, pricetott) {
-        stri= document.getElementById(fidinc).textContent;
-        if(Number(stri)>0){
-        k=Number(stri)-1;
-        document.getElementById(fidinc).innerHTML=k;
-
-        indivprice = document.getElementById(indprice).textContent;
-        pricetot = document.getElementById(pricetott).textContent;
-        
-        l=Number(pricetot)-indivprice;
-        document.getElementById(pricetott).innerHTML=l;
-
-        }
-    }
-
-    function incPrice(){
-        pr=0;
-        p1=Number(document.getElementById("pricetot1").textContent);
-        p2=Number(document.getElementById("pricetot2").textContent);
-        p3=Number(document.getElementById("pricetot3").textContent);
-        p4=Number(document.getElementById("pricetot4").textContent);
-        p5=Number(document.getElementById("pricetot5").textContent);
-        p6=Number(document.getElementById("pricetot6").textContent);
-        p7=Number(document.getElementById("pricetot7").textContent);
-        p8=Number(document.getElementById("pricetot8").textContent);
-        p9=Number(document.getElementById("pricetot9").textContent);
-        p10=Number(document.getElementById("pricetot10").textContent);
-        p11=Number(document.getElementById("pricetot11").textContent);
-        p12=Number(document.getElementById("pricetot12").textContent);
-
-        price_arr=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12];
-
-        pr=pr+p1+p2+p3+p4+p5+p6+p7+p8+p9+p10+p11+p12;
-
-        display = document.getElementById("price").textContent;
-        document.getElementById("price").innerHTML=pr;
-        cart();
-    }
-
-?>
 
     <script>
         pr=0;
